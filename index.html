@@ -1,11 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student grading system</title>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Grading System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <h1>student grading system</h1>
+
+<h2>Student Grading System</h2>
+
+<table id="gradeTable">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>English</th>
+            <th>Math</th>
+            <th>Science</th>
+            <th>History</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" value="Rahul"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Priya"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Michael"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Blessed"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Lisa"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Pamela"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Racahel"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Rahl"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Markson"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Melissa"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Happiness"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Mabel"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Vincent"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Veronica"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Ashley"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="Cynthia"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td><input type="number" min="0" max="100"></td>
+            <td class="total"></td>
+            <td class="percentage"></td>
+            <td class="grade"></td>
+        </tr>
+    </tbody>
+</table>
+
+<button onclick="calculateScores()">Calculate Scores</button>
+<button onclick="cancelScores()">Cancel Scores</button>
+
+<script>
+function calculateScores() {
+    let table = document.getElementById("gradeTable");
+    let rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+
+    for (let row of rows) {
+        let inputs = row.getElementsByTagName("input");
+        let total = 0;
+        let count = 0;
+    
+        for (let i = 1; i <= 4; i++) {
+            let score = parseFloat(inputs[i].value) || 0;
+            total += score;
+            count++;
+        }
+
+        let percentage = (total / (count * 100)) * 100;
+        let grade = "";
+
+        if (percentage >= 90) grade = "A+";
+        else if (percentage >= 80) grade = "A";
+        else if (percentage >= 70) grade = "B";
+        else if (percentage >= 60) grade = "C";
+        else if (percentage >= 50) grade = "D";
+        else grade = "F";
+
+        row.getElementsByClassName("total")[0].innerText = total;
+        row.getElementsByClassName("percentage")[0].innerText = percentage.toFixed(2) + "%";
+        row.getElementsByClassName("grade")[0].innerText = grade;
+    }
+}
+
+function cancelScores() {
+    let table = document.getElementById("gradeTable");
+    let rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+
+    for (let row of rows) {
+        let inputs = row.getElementsByTagName("input");
+
+        // Clear all subject scores
+        for (let i = 1; i <= 4; i++) {
+            inputs[i].value = "";
+        }
+
+        // Clear results
+        row.getElementsByClassName("total")[0].innerText = "";
+        row.getElementsByClassName("percentage")[0].innerText = "";
+        row.getElementsByClassName("grade")[0].innerText = "";
+    }
+}
+</script>
+
 </body>
 </html>
